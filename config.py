@@ -58,7 +58,7 @@ DB_NAME = _get("DB_NAME", "Cluster0")
 # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Env la JSON format: [[-1001234567890, true, 10]]
 _fsubs_env = _get("FSUBS")
-FSUBS = json.loads(_fsubs_env) if _fsubs_env else [[-1003016571084, True, 10]]
+FSUBS = json.loads(_fsubs_env) if _fsubs_env else []
 
 # Database Channel (Primary) - Telegram channel ID (example: -1001234567890)
 DB_CHANNEL = _get_int("DB_CHANNEL", 0)

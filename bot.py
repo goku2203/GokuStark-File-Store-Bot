@@ -68,9 +68,11 @@ class Bot(Client):
                     if channel[2] > 0:
                         self.fsub_dict[channel[0]] = [name, None, channel[1], channel[2]]
                 except Exception as e:
-                    self.LOGGER(__name__, self.name).warning("Bot can't Export Invite link from Force Sub Channel!")
-                    self.LOGGER(__name__, self.name).warning("\nBot Stopped.")
-                    sys.exit()
+                    # Bot stop aagama, andha channel-a skip pannitu continue
+                    self.LOGGER(__name__, self.name).warning(
+                        f"Force Sub channel {channel[0]} skip panniten -> {type(e).__name__}: {e}. "
+                        "Bot andha channel la admin ah irukkanum (Invite Users permission venum)."
+                    )
                     
         # Load dynamically added fsub channels from database
         try:
