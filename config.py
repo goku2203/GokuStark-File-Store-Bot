@@ -24,7 +24,7 @@ DB_NAME = "Cluster0"
 
 FSUBS = [[-1003016571084, True, 10]] # Force Subscription Channels [channel_id, request_enabled, timer_in_minutes]
 # Database Channel (Primary)
-DB_CHANNEL = "" # just put channel id dont add
+DB_CHANNEL = "mongodb+srv://56c0v4anv2_db_user:JdJNctUgXBvuM7ti@cluster0.bxv4ngy.mongodb.net/?retryWrites=true&w=majority"
 # Multiple Database Channels (can be set via bot settings)
 # DB_CHANNELS = {
 #     "-1002595092736": {"name": "Primary DB", "is_primary": True, "is_active": True},
